@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    left: 0;
+    top: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-a {
+    display: flex;
+    gap: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation-b {
+
+}
+
+.section-one {
+    background-image: url(assets/section1-bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
