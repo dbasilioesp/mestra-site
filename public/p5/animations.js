@@ -22,13 +22,13 @@ function sketch(s) {
 
   s.setup = () => {
     canvas = s.createCanvas(GAME.width, GAME.height);
+    canvas.parent('#canvas-p5')
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 200; i++) {
         s.strokeWeight(0);
         const x = s.random(GAME.width)
         const y = s.random(GAME.height)
         let d = s.random(4)
-        console.log(d)
 
         s.circle(x, y, d)
 
@@ -47,20 +47,10 @@ function sketch(s) {
         if (star.y < -10) star.y = GAME.height + 3
     }
   };
-
-  function showClickToStart() {
-    s.textSize(20);
-    s.fill("white");
-    s.textAlign("center");
-    s.text("Click para começar", GAME.halfWidth, GAME.halfHeight);
-  }
-
-  function moveBall() {
-    ball.x += ball.speed * s.cos(s.radians(ball.direction));
-    ball.y -= ball.speed * s.sin(s.radians(ball.direction));
-  }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  new p5((s) => sketch(s));
+  setTimeout(() => {
+    new p5((s) => sketch(s));
+  }, 1000);
 });
