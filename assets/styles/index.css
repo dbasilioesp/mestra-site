@@ -10,34 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-header {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  top: 48px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: var(--container-size);
-  width: 100%;
-}
-
-.navigation-a {
-  display: flex;
-  gap: 40px;
-  font-family: "Poppins", sans-serif;
-}
-
-.navigation-b {
-}
-
-.section-one {
-  background-image: url(assets/section1-bg.jpg);
-  background-size: cover;
-  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 canvas {
@@ -45,4 +18,5 @@ canvas {
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 10;
 }
