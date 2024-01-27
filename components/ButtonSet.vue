@@ -40,6 +40,7 @@ export default {
   font-size: 16px;
   font-weight: medium;
   text-decoration: none;
+  cursor: pointer;
 
   & .nuxt-icon svg {
     width: 22px;

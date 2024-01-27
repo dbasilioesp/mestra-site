@@ -41,24 +41,5 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    let inverse = 1;
-    const aca = document.querySelector("#aca");
-
-    console.log(aca.getAttribute("x1"), aca.getAttribute("y1"));
-
-    // setInterval(() => {
-    //   let x1 = aca.getAttribute("x1");
-
-    //   if (x1 >= 481) inverse = -1;
-    //   if (x1 <= 0) inverse = 1;
-
-    //   x1 = parseFloat(x1) + inverse * 2;
-
-    //   aca.setAttribute("x1", x1);
-
-    // }, 50);
-  },
-};
+export default {};
 </script>

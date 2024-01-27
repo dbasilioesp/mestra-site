@@ -4,6 +4,7 @@
 
 :root {
   --primary-color: #c92b71;
+  --ice-color: #efefef;
   --container-size: 1150px;
 }
 
@@ -13,10 +14,59 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  overflow: hidden;
+}
+
 canvas {
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
   z-index: 10;
+}
+
+/* Typograph */
+
+.title-page {
+  color: white;
+  font-size: 72px;
+  line-height: 1;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title-section {
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Poppins;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 110.345% */
+}
+
+.subtitle {
+  color: var(--primary-color);
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: medium;
+  margin: 0;
+}
+
+.text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Colors */
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.color-white {
+  color: var(--ice-color);
 }
