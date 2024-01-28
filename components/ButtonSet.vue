@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .btn-primary {
   background-color: var(--primary-color);
   height: 58px;
@@ -38,7 +38,7 @@ export default {
   border-radius: 58px;
   border: 0;
   font-size: 16px;
-  font-weight: medium;
+  font-weight: 500;
   text-decoration: none;
   cursor: pointer;
 

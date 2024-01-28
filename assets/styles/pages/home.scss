@@ -4,73 +4,117 @@
   transform: translate(-50%);
   top: 48px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+
+  display: grid;
+  justify-items: space-between;
   align-items: center;
+  grid-template-columns: 1fr 270px 1fr;
+  justify-items: center;
+  align-items: center;
+
   max-width: var(--container-size);
   width: 100%;
   z-index: 10;
+  overflow: hidden;
+  padding-inline: 3vw;
+
+  @media screen and (min-width: 1200px) {
+    padding-inline: 0;
+  }
+
+  > *:nth-child(3) {
+    justify-self: end;
+  }
 
   &__piramid {
     position: absolute;
     top: 0;
     right: -390px;
   }
+
+  & &__button {
+    display: none;
+
+    @media screen and (min-width: 900px) {
+      display: block;
+    }
+  }
+
+  &__logo {
+    width: clamp(180px, 40vw, 270px);
+  }
 }
 
-.section-one {
+.block-one {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 200px;
+  gap: clamp(70px, 5vw, 200px);
   flex-direction: column;
   position: relative;
   background-image: url(assets/section1-bg.jpg);
   background-size: cover;
   min-height: 100vh;
+}
+
+.section-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 37px;
+  margin-block-start: clamp(215px, 48vw, 315px);
+  max-width: 640px;
+  padding-inline: min(3vw, 16px);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.section-app {
+  display: flex;
+  gap: min(40px, 6.6vw);
+  margin-block-end: 300px;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    gap: min(10vw, 160px);
+    align-items: flex-start;
+  }
 
   &__message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 37px;
-    margin-block-start: 315px;
-    max-width: 640px;
-    text-align: center;
-    text-wrap: balance;
-  }
-
-  &__app {
-    display: flex;
-    gap: 160px;
-    margin-bottom: 300px;
-  }
-
-  &__app-message {
     max-width: 456px;
     width: 100%;
-    margin-top: 128px;
+    margin-block-start: clamp(50px, 4vw, 128px);
+    padding-inline: max(3vw, 40px);
+
+    @media screen and (min-width: 900px) {
+      padding-inline: 0;
+    }
   }
 
-  &__app-title {
-    margin-top: 0;
+  &__title {
+    margin-block-start: 0;
   }
 
-  &__app-tag {
+  &__tag {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 
-  &__app-text {
-    margin-bottom: 32px;
+  &__text {
+    margin-block-end: 32px;
     max-width: 313px;
   }
 
-  &__app-photo {
+  &__photo {
     position: relative;
     z-index: 20;
+    display: none;
+
+    @media screen and (min-width: 900px) {
+      display: block;
+    }
 
     img {
       position: relative;
@@ -78,26 +122,22 @@
     }
   }
 
-  &__app-piramid {
+  &__piramid {
     position: absolute;
     z-index: 0;
-    top: 100px;
-    left: -400px;
+    top: -60px;
+    left: -350px;
   }
 
-  &__app-letreiro {
-    position: absolute;
-    z-index: 0;
-    bottom: 50px;
-    right: -200px;
-  }
-
-  &__app-letreiro-inner {
-    position: relative;
+  &__letreiro {
     display: grid;
     align-items: center;
     justify-items: center;
     text-align: center;
+    position: absolute;
+    z-index: 10;
+    bottom: 180px;
+    right: -100px;
 
     > * {
       grid-column: 1;
@@ -105,8 +145,13 @@
     }
   }
 
-  &__app-letreiro-icon {
+  &__letreiro-icon {
+    width: 100%;
     animation: rotate-circle 15s forwards linear infinite;
+  }
+
+  &__letreiro-piramid {
+    width: 30%;
   }
 }
 

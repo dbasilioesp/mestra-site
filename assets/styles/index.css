@@ -30,7 +30,7 @@ canvas {
 
 .title-page {
   color: white;
-  font-size: 72px;
+  font-size: clamp(48px, 5vw, 72px);
   line-height: 1;
   font-weight: bold;
   margin: 0;
@@ -48,9 +48,9 @@ canvas {
 
 .subtitle {
   color: var(--primary-color);
-  font-size: 20px;
+  font-size: clamp(18px, 2vw, 20px);
   line-height: 1.5;
-  font-weight: medium;
+  font-weight: 500;
   margin: 0;
 }
 
